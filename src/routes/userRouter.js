@@ -1,9 +1,7 @@
-import express from 'express';
+const userRouter = app => {
+  app.get('/user', async (req, res) => {
+    send('user');
+  });
+};
 
-const router = express.Router();
-
-router.get('/', (req, res) => {
-  res.send('login');
-});
-
-export default router;
+export default userRouter;

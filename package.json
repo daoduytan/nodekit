@@ -1,34 +1,38 @@
 {
-  "name": "nodekit",
+  "name": "node_kit",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec babel-node -- src/index.js",
+    "dev": "nodemon --exec babel-node src/index.js",
     "build": "babel src -d build",
-    "start": "node build/index.js"
-  },
-  "dependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "body-parser": "^1.18.3",
-    "cors": "^2.8.5",
-    "dotenv": "^7.0.0",
-    "express": "^4.16.4",
-    "graphql": "^14.2.1",
-    "graphql-server-express": "^1.4.0",
-    "graphql-tools": "^4.0.4",
-    "lodash": "^4.17.11",
-    "mongoose": "^5.4.21"
+    "start": "node build/index.js",
+    "lint": "eslint src",
+    "lint:fixed": "eslint --fix src"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "flow-bin": "^0.95.1",
-    "nodemon": "^1.18.9"
+    "babel-preset-latest": "^6.24.1",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.8.1",
+    "babel-polyfill": "^6.26.0",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "graphql": "^14.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.6.9"
   }
 }
